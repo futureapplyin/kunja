@@ -8,43 +8,11 @@ description: "Discover colleges and apply to institutions in India and abroad wi
 <div class="hero-section">
   <div class="container">
     <div class="hero-content">
-      <h1 class="display-4 fw-bold mb-4">Your Gateway to Higher Education</h1>
+      <h1 class="display-4 fw-bold mb-4">The joy of studying in india begins with us</h1>
       <p class="lead mb-4">Discover colleges, explore courses, and apply to institutions in India and abroad - all in one place.</p>
       <div class="d-flex justify-content-center gap-3">
         <a href="{{ '/colleges/' | relative_url }}" class="btn btn-primary btn-lg">Explore Colleges</a>
         <a href="{{ '/application/' | relative_url }}" class="btn btn-outline-light btn-lg">Apply Now</a>
-      </div>
-      
-      <!-- Search Form -->
-      <div class="search-form">
-        <form id="searchForm">
-          <div class="row">
-            <div class="col-md-4 mb-3 mb-md-0">
-              <select class="form-select" id="countrySelect">
-                <option selected>Select Country</option>
-                <option value="india">India</option>
-                <option value="usa">USA</option>
-                <option value="uk">UK</option>
-                <option value="canada">Canada</option>
-                <option value="australia">Australia</option>
-              </select>
-            </div>
-            <div class="col-md-4 mb-3 mb-md-0">
-              <select class="form-select" id="courseSelect">
-                <option selected>Select Course</option>
-                <option value="engineering">Engineering</option>
-                <option value="medicine">Medicine</option>
-                <option value="business">Business</option>
-                <option value="arts">Arts & Humanities</option>
-                <option value="science">Science</option>
-              </select>
-            </div>
-            <div class="col-md-4">
-              <button type="submit" class="btn btn-primary w-100">Search</button>
-            </div>
-          </div>
-        </form>
-        <div id="searchResults"></div>
       </div>
     </div>
   </div>
