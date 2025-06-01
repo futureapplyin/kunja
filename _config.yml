@@ -1,0 +1,21 @@
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "FutureApply" # the name of your site
+description: "Helping students discover colleges and apply to institutions in India and abroad"
+author: "FutureApply Team"
+email: "info@futureapply.com"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  colleges:
+    output: true
+    permalink: /colleges/:path/
+  courses:
+    output: true
+    permalink: /courses/:path/

@@ -1,0 +1,195 @@
+---
+---
+
+@import "variables";
+@import "base";
+
+// Additional styling for the teal theme
+
+// Navbar styling
+.bg-primary {
+  background-color: $primary-color !important;
+}
+
+.navbar-dark.bg-primary {
+  background-color: $primary-color !important;
+}
+
+// Button styling
+.btn-primary {
+  background-color: $primary-color !important;
+  border-color: $primary-color !important;
+  
+  &:hover, &:focus, &:active {
+    background-color: darken($primary-color, 10%) !important;
+    border-color: darken($primary-color, 12%) !important;
+  }
+}
+
+.btn-outline-primary {
+  color: $primary-color !important;
+  border-color: $primary-color !important;
+  
+  &:hover, &:focus {
+    background-color: $primary-color !important;
+    border-color: $primary-color !important;
+    color: white !important;
+  }
+}
+
+// Footer styling
+.footer {
+  background-color: $dark-color !important;
+}
+
+// Global styling
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+// Links
+a {
+  color: $primary-color;
+  
+  &:hover {
+    color: darken($primary-color, 15%);
+  }
+}
+
+// Cards
+.card {
+  border-color: lighten($accent-color, 15%);
+  
+  .card-header {
+    background-color: $light-color;
+  }
+}
+
+// Form elements
+.form-control:focus {
+  border-color: $secondary-color;
+  box-shadow: 0 0 0 0.25rem rgba($primary-color, 0.25);
+}
+
+// Badges
+.badge.bg-primary {
+  background-color: $primary-color !important;
+}
+
+.text-primary {
+  color: $primary-color !important;
+}
+
+// Custom components
+.main-content {
+  min-height: calc(100vh - 300px);
+}
+
+// Hero section
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+// Feature cards
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  height: 100%;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// College and course cards
+.college-card, .course-card {
+  transition: transform 0.3s ease;
+  margin-bottom: 30px;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+// Search form
+.search-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+// Testimonials
+.testimonial {
+  padding: 20px;
+  text-align: center;
+}
+
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px;
+}
+
+// Footer
+.footer {
+  .social-icons a {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: $accent-color !important;
+    }
+  }
+}
+
+// Contact form
+.contact-form {
+  background-color: $light-color;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+// Application form
+.application-form {
+  .form-section {
+    margin-bottom: 30px;
+  }
+  
+  .form-section-title {
+    border-bottom: 2px solid $primary-color;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+  
+  .search-form {
+    margin-top: 20px;
+  }
+}

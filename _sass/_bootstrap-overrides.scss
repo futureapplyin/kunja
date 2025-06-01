@@ -1,0 +1,105 @@
+// Bootstrap overrides for teal theme
+
+// Define teal color scheme
+$primary-color: #009688; // Teal as primary color
+$secondary-color: #4db6ac; // Lighter teal as secondary
+$accent-color: #80cbc4;  // Even lighter teal as accent
+$dark-color: #00796b;    // Darker teal for important elements
+$light-color: #e0f2f1;   // Very light teal for backgrounds
+
+// Override Bootstrap primary color to use our teal
+$primary: $primary-color;
+$secondary: $secondary-color;
+$success: $dark-color;
+$info: $accent-color;
+
+// Update other theme colors
+$theme-colors: (
+  "primary": $primary-color,
+  "secondary": $secondary-color,
+  "success": $dark-color,
+  "info": $accent-color,
+  "light": $light-color
+);
+
+// Update navbar styles
+.navbar-dark.bg-primary {
+  background-color: $primary-color !important;
+}
+
+// Update buttons
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  
+  &:hover, &:focus, &:active {
+    background-color: darken($primary-color, 10%);
+    border-color: darken($primary-color, 12%);
+  }
+}
+
+.btn-outline-primary {
+  color: $primary-color;
+  border-color: $primary-color;
+  
+  &:hover, &:focus {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+// Update links
+a {
+  color: $primary-color;
+  
+  &:hover {
+    color: darken($primary-color, 15%);
+  }
+}
+
+// Hero section with teal gradient
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+// Update footer
+.footer {
+  background-color: darken($dark-color, 5%) !important;
+}
+
+// Card and form highlights
+.card {
+  border-color: lighten($accent-color, 15%);
+  
+  .card-header {
+    background-color: $light-color;
+  }
+}
+
+// Form elements
+.form-control:focus {
+  border-color: $secondary-color;
+  box-shadow: 0 0 0 0.25rem rgba($primary-color, 0.25);
+}
+
+// Badges
+.badge.bg-primary {
+  background-color: $primary-color !important;
+}
+
+.badge.bg-secondary {
+  background-color: $secondary-color !important;
+}
+
+// Accordion customization
+.accordion-button:not(.collapsed) {
+  background-color: $light-color;
+  color: $dark-color;
+}
+
+.accordion-button:focus {
+  border-color: $accent-color;
+  box-shadow: 0 0 0 0.25rem rgba($accent-color, 0.25);
+}
