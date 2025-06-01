@@ -60,57 +60,8 @@ description: "Discover colleges and apply to institutions in India and abroad wi
   </div>
 </section>
 
-<!-- Featured Colleges Section -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">Featured Colleges</h2>
-      <p class="lead text-muted">Top institutions in India and abroad</p>
-    </div>
-    
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card college-card">
-          <img src="https://via.placeholder.com/350x200?text=College+Image" class="card-img-top" alt="College 1">
-          <div class="card-body">
-            <h5 class="card-title">Delhi University</h5>
-            <p class="card-text">A premier university in India offering diverse undergraduate and postgraduate programs.</p>
-            <a href="#" class="btn btn-outline-primary">View Details</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4">
-        <div class="card college-card">
-          <img src="https://via.placeholder.com/350x200?text=College+Image" class="card-img-top" alt="College 2">
-          <div class="card-body">
-            <h5 class="card-title">Harvard University</h5>
-            <p class="card-text">One of the world's most prestigious universities known for excellence in education and research.</p>
-            <a href="#" class="btn btn-outline-primary">View Details</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4">
-        <div class="card college-card">
-          <img src="https://via.placeholder.com/350x200?text=College+Image" class="card-img-top" alt="College 3">
-          <div class="card-body">
-            <h5 class="card-title">University of Toronto</h5>
-            <p class="card-text">Canada's leading institution for learning, discovery, and knowledge creation.</p>
-            <a href="#" class="btn btn-outline-primary">View Details</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="text-center mt-4">
-      <a href="{{ '/colleges/' | relative_url }}" class="btn btn-primary">View All Colleges</a>
-    </div>
-  </div>
-</section>
-
 <!-- Testimonials Section -->
-<section class="py-5">
+<section class="py-5 bg-light">
   <div class="container">
     <div class="text-center mb-5">
       <h2 class="fw-bold">Student Success Stories</h2>
@@ -120,7 +71,7 @@ description: "Discover colleges and apply to institutions in India and abroad wi
     <div class="row">
       <div class="col-md-4">
         <div class="card testimonial">
-          <img src="https://via.placeholder.com/80x80?text=Student" class="testimonial-img" alt="Student 1">
+          <img src="https://i.pravatar.cc/300?img=1" class="testimonial-img" alt="Student 1">
           <div class="card-body">
             <h5 class="card-title">Rahul Sharma</h5>
             <p class="card-subtitle mb-2 text-muted">Delhi University</p>
@@ -131,7 +82,7 @@ description: "Discover colleges and apply to institutions in India and abroad wi
       
       <div class="col-md-4">
         <div class="card testimonial">
-          <img src="https://via.placeholder.com/80x80?text=Student" class="testimonial-img" alt="Student 2">
+          <img src="https://i.pravatar.cc/150?img=31" class="testimonial-img" alt="Student 2">
           <div class="card-body">
             <h5 class="card-title">Priya Patel</h5>
             <p class="card-subtitle mb-2 text-muted">University of Toronto</p>
@@ -142,7 +93,7 @@ description: "Discover colleges and apply to institutions in India and abroad wi
       
       <div class="col-md-4">
         <div class="card testimonial">
-          <img src="https://via.placeholder.com/80x80?text=Student" class="testimonial-img" alt="Student 3">
+          <img src="https://i.pravatar.cc/150?img=32" class="testimonial-img" alt="Student 3">
           <div class="card-body">
             <h5 class="card-title">Amit Singh</h5>
             <p class="card-subtitle mb-2 text-muted">MIT</p>

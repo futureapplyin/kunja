@@ -1,16 +1,20 @@
 /* Teal Theme for FutureApply */
 
 :root {
-  --primary: #009688;
-  --secondary: #4db6ac;
-  --accent: #80cbc4;
-  --dark: #00796b;
-  --light: #e0f2f1;
+  --primary: #00ABAA;
+  --secondary: #4ECCCB;
+  --accent: #8FE0DF;
+  --dark: #008887;
+  --light: #E5F7F7;
 }
 
 /* Navbar styling - keeping white */
+/* Navbar with white background */
 .navbar-dark.bg-primary {
   background-color: #ffffff !important;
+  --navbar-text-color: #333333;
+  --navbar-hover-color: var(--primary);
+  --navbar-active-color: var(--primary);
 }
 
 /* Enhance sticky header with shadow for better distinction when scrolling */
@@ -20,12 +24,13 @@
   z-index: 1030;
 }
 
-/* Update navbar styles for better visibility on white background */
+/* Navbar links */
 .navbar-dark .navbar-nav .nav-link {
-  color: #333333 !important;
+  color: var(--navbar-text-color) !important;
   font-weight: 500;
   padding: 0.5rem 1rem;
   transition: all 0.2s ease;
+  position: relative;
 }
 
 .navbar-dark .navbar-brand {
@@ -35,12 +40,15 @@
 }
 
 .navbar-dark .navbar-nav .nav-link.active {
-  color: var(--primary) !important;
-  font-weight: bold;
+  color: var(--navbar-active-color) !important;
+  font-weight: 600;
 }
 
+/* Removed underline from active menu items as per user request */
+
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: var(--dark) !important;
+  color: var(--navbar-hover-color) !important;
+  opacity: 0.9;
 }
 
 /* Fix navbar toggle button for white background */
@@ -50,7 +58,7 @@
 }
 
 .navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 150, 136, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 171, 170, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* Button styling */
@@ -101,7 +109,7 @@ a:hover {
 /* Form elements */
 .form-control:focus {
   border-color: var(--secondary);
-  box-shadow: 0 0 0 0.25rem rgba(0, 150, 136, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(0, 171, 170, 0.25);
 }
 
 /* Background colors */
@@ -120,7 +128,7 @@ a:hover {
 /* Hero section with improved contrast */
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(rgba(0, 77, 64, 0.8), rgba(0, 77, 64, 0.9)), url('/assets/images/hero-bg.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 136, 135, 0.8), rgba(0, 136, 135, 0.9)), url('/assets/images/hero-bg.jpg') center/cover no-repeat;
   color: white;
   padding: 5rem 0;
   text-align: center;
@@ -239,7 +247,7 @@ a:hover {
 
 /* Feature cards hover effect with teal shadow */
 .feature-card:hover {
-  box-shadow: 0 10px 20px rgba(0, 150, 136, 0.2) !important;
+  box-shadow: 0 10px 20px rgba(0, 171, 170, 0.2) !important;
 }
 
 /* Override any blue accents with teal */
@@ -253,6 +261,42 @@ a:hover {
 
 /* Navigation active link */
 .nav-link.active {
-  color: var(--light) !important;
+  color: var(--primary) !important;
   font-weight: bold;
+}
+
+/* Dark mode considerations */
+@media (prefers-color-scheme: dark) {
+  /* Keep navbar white in dark mode as per user preference */
+  .navbar-dark.bg-primary {
+    --navbar-text-color: #333333;
+    --navbar-hover-color: var(--primary);
+    --navbar-active-color: var(--primary);
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: var(--navbar-text-color) !important;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link.active {
+    color: var(--navbar-active-color) !important;
+  }
+  
+  /* Removed active underline in dark mode as well */
+  
+  .btn-outline-primary {
+    color: var(--accent) !important;
+  }
+  
+  .btn-outline-primary:hover {
+    color: #212529 !important;
+  }
+  
+  a {
+    color: var(--accent);
+  }
+  
+  a:hover {
+    color: var(--light);
+  }
 }

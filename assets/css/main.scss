@@ -1,23 +1,17 @@
-// Import Bootstrap and custom variables
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/root";
-@import "bootstrap/scss/reboot";
-@import "bootstrap/scss/type";
-@import "bootstrap/scss/containers";
-@import "bootstrap/scss/grid";
-@import "bootstrap/scss/buttons";
-@import "bootstrap/scss/forms";
-@import "bootstrap/scss/nav";
-@import "bootstrap/scss/navbar";
-@import "bootstrap/scss/card";
-@import "bootstrap/scss/accordion";
-@import "bootstrap/scss/utilities";
+// Jekyll front matter (commented out for SCSS processing)
+//---
+// # Jekyll front matter to ensure this file is processed
+//---
 
-// Import custom variables and base styles
+// Import custom variables first (Bootstrap variables will be overridden)
 @import "variables";
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// Import base styles
 @import "base";
+@import "bootstrap-overrides";
 
 // Custom styles
 
