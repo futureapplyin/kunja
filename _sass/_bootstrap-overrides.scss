@@ -1,59 +1,53 @@
 // Bootstrap overrides for teal theme
 
-// Define teal color scheme
-$primary-color: #009688; // Teal as primary color
-$secondary-color: #4db6ac; // Lighter teal as secondary
-$accent-color: #80cbc4;  // Even lighter teal as accent
-$dark-color: #00796b;    // Darker teal for important elements
-$light-color: #e0f2f1;   // Very light teal for backgrounds
+// Color variables have been moved to CSS variables in custom.css
 
-// Override Bootstrap primary color to use our teal
-$primary: $primary-color;
-$secondary: $secondary-color;
-$success: $dark-color;
-$info: $accent-color;
+// Define Bootstrap variable overrides using CSS variables
+$primary: var(--primary);
+$secondary: var(--secondary);
+$success: var(--dark);
+$info: var(--accent);
 
-// Update other theme colors
 $theme-colors: (
-  "primary": $primary-color,
-  "secondary": $secondary-color,
-  "success": $dark-color,
-  "info": $accent-color,
-  "light": $light-color
+  "primary": var(--primary),
+  "secondary": var(--secondary),
+  "success": var(--dark),
+  "info": var(--accent),
+  "light": var(--light)
 );
 
 // Update navbar styles
 .navbar-dark.bg-primary {
-  background-color: $primary-color !important;
+  background-color: var(--primary) !important;
 }
 
 // Update buttons
 .btn-primary {
-  background-color: $primary-color;
-  border-color: $primary-color;
+  background-color: var(--primary);
+  border-color: var(--primary);
   
   &:hover, &:focus, &:active {
-    background-color: darken($primary-color, 10%);
-    border-color: darken($primary-color, 12%);
+    background-color: color-mix(in srgb, var(--primary) 90%, black);
+    border-color: color-mix(in srgb, var(--primary) 88%, black);
   }
 }
 
 .btn-outline-primary {
-  color: $primary-color;
-  border-color: $primary-color;
+  color: var(--primary);
+  border-color: var(--primary);
   
   &:hover, &:focus {
-    background-color: $primary-color;
-    border-color: $primary-color;
+    background-color: var(--primary);
+    border-color: var(--primary);
   }
 }
 
 // Update links
 a {
-  color: $primary-color;
+  color: var(--primary);
   
   &:hover {
-    color: darken($primary-color, 15%);
+    color: color-mix(in srgb, var(--primary) 85%, black);
   }
 }
 
@@ -66,40 +60,40 @@ a {
 
 // Update footer
 .footer {
-  background-color: darken($dark-color, 5%) !important;
+  background-color: color-mix(in srgb, var(--dark) 95%, black) !important;
 }
 
 // Card and form highlights
 .card {
-  border-color: lighten($accent-color, 15%);
+  border-color: color-mix(in srgb, var(--accent) 85%, white);
   
   .card-header {
-    background-color: $light-color;
+    background-color: var(--light);
   }
 }
 
 // Form elements
 .form-control:focus {
-  border-color: $secondary-color;
-  box-shadow: 0 0 0 0.25rem rgba($primary-color, 0.25);
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--primary) 25%, transparent);
 }
 
 // Badges
 .badge.bg-primary {
-  background-color: $primary-color !important;
+  background-color: var(--primary) !important;
 }
 
 .badge.bg-secondary {
-  background-color: $secondary-color !important;
+  background-color: var(--secondary) !important;
 }
 
 // Accordion customization
 .accordion-button:not(.collapsed) {
-  background-color: $light-color;
-  color: $dark-color;
+  background-color: var(--light);
+  color: var(--dark);
 }
 
 .accordion-button:focus {
-  border-color: $accent-color;
-  box-shadow: 0 0 0 0.25rem rgba($accent-color, 0.25);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--accent) 25%, transparent);
 }

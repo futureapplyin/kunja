@@ -1,45 +1,62 @@
----
----
+// Import Bootstrap and custom variables
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/accordion";
+@import "bootstrap/scss/utilities";
 
+// Import custom variables and base styles
 @import "variables";
 @import "base";
+
+// Custom styles
 
 // Additional styling for the teal theme
 
 // Navbar styling
 .bg-primary {
-  background-color: $primary-color !important;
+  background-color: var(--primary) !important;
 }
 
 .navbar-dark.bg-primary {
-  background-color: $primary-color !important;
+  background-color: var(--primary) !important;
 }
 
 // Button styling
 .btn-primary {
-  background-color: $primary-color !important;
-  border-color: $primary-color !important;
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
   
   &:hover, &:focus, &:active {
-    background-color: darken($primary-color, 10%) !important;
-    border-color: darken($primary-color, 12%) !important;
+    background-color: color-mix(in srgb, var(--primary) 90%, black) !important;
+    border-color: color-mix(in srgb, var(--primary) 88%, black) !important;
   }
 }
 
 .btn-outline-primary {
-  color: $primary-color !important;
-  border-color: $primary-color !important;
+  color: var(--primary) !important;
+  border-color: var(--primary) !important;
   
   &:hover, &:focus {
-    background-color: $primary-color !important;
-    border-color: $primary-color !important;
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
     color: white !important;
   }
 }
 
 // Footer styling
 .footer {
-  background-color: $dark-color !important;
+  background-color: var(--dark) !important;
 }
 
 // Global styling
@@ -50,35 +67,35 @@ body {
 
 // Links
 a {
-  color: $primary-color;
+  color: var(--primary);
   
   &:hover {
-    color: darken($primary-color, 15%);
+    color: color-mix(in srgb, var(--primary) 85%, black);
   }
 }
 
 // Cards
 .card {
-  border-color: lighten($accent-color, 15%);
+  border-color: color-mix(in srgb, var(--accent) 85%, white);
   
   .card-header {
-    background-color: $light-color;
+    background-color: var(--light);
   }
 }
 
 // Form elements
 .form-control:focus {
-  border-color: $secondary-color;
-  box-shadow: 0 0 0 0.25rem rgba($primary-color, 0.25);
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--primary) 25%, transparent);
 }
 
 // Badges
 .badge.bg-primary {
-  background-color: $primary-color !important;
+  background-color: var(--primary) !important;
 }
 
 .text-primary {
-  color: $primary-color !important;
+  color: var(--primary) !important;
 }
 
 // Custom components
@@ -86,20 +103,7 @@ a {
   min-height: calc(100vh - 300px);
 }
 
-// Hero section
-.hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/images/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 100px 0;
-  text-align: center;
-}
-
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
+// Hero section styles moved to custom.css for consistency
 
 // Feature cards
 .feature-card {
@@ -158,14 +162,14 @@ a {
     transition: color 0.3s ease;
     
     &:hover {
-      color: $accent-color !important;
+      color: var(--accent) !important;
     }
   }
 }
 
 // Contact form
 .contact-form {
-  background-color: $light-color;
+  background-color: var(--light);
   padding: 30px;
   border-radius: 5px;
 }
@@ -177,7 +181,7 @@ a {
   }
   
   .form-section-title {
-    border-bottom: 2px solid $primary-color;
+    border-bottom: 2px solid var(--primary);
     padding-bottom: 10px;
     margin-bottom: 20px;
   }
