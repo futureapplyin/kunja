@@ -1,11 +1,15 @@
-/* Teal Theme for FutureApply */
+/* Updated Color Theme for FutureApply */
 
 :root {
-  --primary: #009688;
-  --secondary: #4db6ac;
-  --accent: #80cbc4;
-  --dark: #00796b;
-  --light: #e0f2f1;
+  --primary: #00ABAA;       /* Primary brand color */
+  --primary-light: #33BCBB;  /* Lighter primary variant */
+  --primary-dark: #008A89;   /* Darker primary variant */
+  --secondary: #00C7C6;     /* Secondary color */
+  --accent: #7FE3E3;        /* Accent color */
+  --dark: #006666;          /* Dark color for text and important elements */
+  --light: #E6F7F7;         /* Light color for backgrounds */
+  --text-on-light: #333333;  /* Text color on light backgrounds */
+  --text-on-dark: #FFFFFF;   /* Text color on dark backgrounds */
 }
 
 /* Navbar styling - keeping white */
@@ -20,9 +24,9 @@
   z-index: 1030;
 }
 
-/* Update navbar styles for better visibility on white background */
+/* Navbar styles with updated color scheme */
 .navbar-dark .navbar-nav .nav-link {
-  color: #333333 !important;
+  color: var(--text-on-light) !important;
   font-weight: 500;
   padding: 0.5rem 1rem;
   transition: all 0.2s ease;
@@ -37,13 +41,111 @@
 .navbar-dark .navbar-nav .nav-link.active {
   color: var(--primary) !important;
   font-weight: bold;
+  position: relative;
+}
+
+.navbar-dark .navbar-nav .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  height: 2px;
+  background-color: var(--primary);
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: var(--dark) !important;
+  color: var(--primary-dark) !important;
 }
 
-/* Fix navbar toggle button for white background */
+/* Navbar toggle button for white background */
+.navbar-dark .navbar-toggler {
+  border-color: var(--primary);
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Ensure proper contrast for buttons */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: white;
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+/* Hero section with new color scheme */
+.hero-section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: 5rem 0;
+}
+
+/* Ensure text contrast */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dark);
+}
+
+/* Links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Cards */
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: var(--light);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark);
+  color: white;
+  padding: 3rem 0;
+}
+
+footer a {
+  color: var(--accent);
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: none;
+}
 .navbar-dark .navbar-toggler {
   border-color: var(--primary);
   color: var(--primary);
