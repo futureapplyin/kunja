@@ -300,3 +300,269 @@ a:hover {
     color: var(--light);
   }
 }
+
+/* Modern Testimonials */
+#testimonials {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0;
+}
+
+#testimonials::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(229, 247, 247, 0.6), rgba(255, 255, 255, 0.8));
+  z-index: -1;
+}
+
+#testimonials .section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+/* Removed the underline from section title */
+#testimonials .section-title::after {
+  display: none;
+}
+
+#testimonials .section-subtitle {
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  font-weight: 400;
+}
+
+.testimonial {
+  transition: all 0.3s ease;
+  padding: 4.5rem 1.5rem 1.5rem; /* Increased top padding for the 25% overlap */
+  text-align: center;
+  border: 1px solid rgba(0, 171, 170, 0.2); /* Light border using theme color with 20% opacity */
+  border-radius: 16px;
+  background: white;
+  overflow: visible; /* Changed to visible to show overflowing image */
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 0; /* Reset margin-top */
+  margin-bottom: 2rem; /* Add bottom margin for spacing */
+}
+
+.testimonial::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  z-index: 1;
+  opacity: 0.9;
+  transition: height 0.3s ease;
+}
+
+.testimonial .card-body {
+  padding: 1.5rem 0.5rem 0.5rem;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial .card-title {
+  font-weight: 600;
+  margin: 1.5rem 0 0.25rem;
+  color: var(--dark);
+  font-size: 1.25rem;
+}
+
+.testimonial .card-subtitle {
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1.5rem; /* Adjusted margins */
+  position: relative;
+  display: inline-block;
+}
+
+.testimonial .card-subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.testimonial .card-text {
+  color: #555;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin: 0 0 1.5rem;
+  position: relative;
+  padding: 0 0.5rem;
+  flex: 1;
+  font-style: italic;
+  quotes: "\201C" "\201D";
+}
+
+.testimonial .card-text::before {
+  content: open-quote;
+  font-size: 2.5em;
+  line-height: 0.1em;
+  margin-right: 0.15em;
+  vertical-align: -0.3em;
+  color: var(--primary);
+  opacity: 0.6;
+}
+
+.testimonial .card-text::after {
+  content: close-quote;
+  font-size: 2.5em;
+  line-height: 0.1em;
+  margin-left: 0.15em;
+  vertical-align: -0.5em;
+  color: var(--primary);
+  opacity: 0.6;
+}
+
+.testimonial .card-text::before,
+.testimonial .card-text::after {
+  font-family: Georgia, serif;
+  font-size: 3.5rem;
+  position: absolute;
+  opacity: 0.1;
+  color: var(--primary);
+}
+
+.testimonial .card-text::before {
+  content: '\201C';
+  top: -15px;
+  left: -5px;
+}
+
+.testimonial .card-text::after {
+  content: '\201D';
+  bottom: -30px;
+  right: 0;
+}
+
+.testimonial:hover,
+.testimonial:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial:hover::before,
+.testimonial:focus::before {
+  height: 6px;
+}
+
+.testimonial:hover .card-subtitle::after,
+.testimonial:focus .card-subtitle::after {
+  width: 60px;
+}
+
+.testimonial:active {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem; /* Reset margin */
+  transition: all 0.3s ease;
+  border: 4px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  top: -22.5px; /* 25% above the card (90px * 0.25 = 22.5px) */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background: white;
+}
+
+.testimonial-img::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.testimonial:hover .testimonial-img {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial:hover .testimonial-img::before {
+  opacity: 1;
+  animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .testimonial {
+    margin-top: 22.5px; /* Match the overlap amount (90px * 0.25 = 22.5px) */
+    margin-bottom: 3rem; /* Consistent bottom margin */
+  }
+  
+  .testimonial:last-child {
+    margin-bottom: 2rem; /* Keep some bottom margin for the last card */
+  }
+  
+  /* Add spacing between cards in the row */
+  .row > [class*='col-'] {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .testimonial {
+    padding: 2rem 1.5rem;
+  }
+  
+  .testimonial .card-text {
+    font-size: 0.9rem;
+  }
+  
+  .testimonial .card-text::before,
+  .testimonial .card-text::after {
+    font-size: 3rem;
+  }
+  
+  .testimonial-img {
+    width: 80px;
+    height: 80px;
+  }
+}

@@ -8,7 +8,7 @@ description: "Discover colleges and apply to institutions in India and abroad wi
 <div class="hero-section">
   <div class="container">
     <div class="hero-content">
-      <h1 class="display-4 fw-bold mb-4">The joy of studying in india begins with us</h1>
+      <h1 class="display-4 fw-bold mb-4">The joy of studying begins with us</h1>
       <p class="lead mb-4">Discover colleges, explore courses, and apply to institutions in India and abroad - all in one place.</p>
       <div class="d-flex justify-content-center gap-3">
         <a href="{{ '/colleges/' | relative_url }}" class="btn btn-primary btn-lg">Explore Colleges</a>
@@ -61,11 +61,11 @@ description: "Discover colleges and apply to institutions in India and abroad wi
 </section>
 
 <!-- Testimonials Section -->
-<section class="py-5 bg-light">
+<section id="testimonials" class="py-5 bg-light">
   <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">Student Success Stories</h2>
-      <p class="lead text-muted">Hear from students who found their dream college through FutureApply</p>
+    <div class="text-center">
+      <h2 class="section-title fw-bold">Student Success Stories</h2>
+      <p class="section-subtitle">Hear from students who found their dream college through FutureApply</p>
     </div>
     
     <div class="row">
@@ -75,7 +75,7 @@ description: "Discover colleges and apply to institutions in India and abroad wi
           <div class="card-body">
             <h5 class="card-title">Rahul Sharma</h5>
             <p class="card-subtitle mb-2 text-muted">Delhi University</p>
-            <p class="card-text">"FutureApply made it easy for me to find the perfect college that matched my interests and budget. The application process was straightforward and I got accepted to my dream university!"</p>
+            <p class="card-text">FutureApply made it easy for me to find the perfect college that matched my interests and budget. The application process was straightforward and I got accepted to my dream university!</p>
           </div>
         </div>
       </div>
@@ -86,7 +86,7 @@ description: "Discover colleges and apply to institutions in India and abroad wi
           <div class="card-body">
             <h5 class="card-title">Priya Patel</h5>
             <p class="card-subtitle mb-2 text-muted">University of Toronto</p>
-            <p class="card-text">"I was overwhelmed with the idea of studying abroad until I found FutureApply. They guided me through every step of the application process and helped me secure a scholarship."</p>
+            <p class="card-text">I was overwhelmed with the idea of studying abroad until I found FutureApply. They guided me through every step of the application process and helped me secure a scholarship.</p>
           </div>
         </div>
       </div>
@@ -97,7 +97,7 @@ description: "Discover colleges and apply to institutions in India and abroad wi
           <div class="card-body">
             <h5 class="card-title">Amit Singh</h5>
             <p class="card-subtitle mb-2 text-muted">MIT</p>
-            <p class="card-text">"Thanks to FutureApply, I was able to compare different engineering programs across multiple countries and find the one that best suited my career aspirations."</p>
+            <p class="card-text">Thanks to FutureApply, I was able to compare different engineering programs across multiple countries and find the one that best suited my career aspirations.</p>
           </div>
         </div>
       </div>
