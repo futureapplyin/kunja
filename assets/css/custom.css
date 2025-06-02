@@ -240,9 +240,36 @@ a:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Call to action section */
+/* Call to Action Section */
 .py-5.bg-primary {
   background-color: var(--primary) !important;
+  padding: 6rem 0 !important;
+}
+
+/* CTA Button Styling - Matching hero section */
+.py-5.bg-primary .btn-outline-light {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.py-5.bg-primary .btn-outline-light:hover {
+  background-color: white;
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.py-5.bg-primary .btn-outline-light:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Feature cards hover effect with teal shadow */

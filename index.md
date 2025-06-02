@@ -110,6 +110,6 @@ description: "Discover colleges and apply to institutions in India and abroad wi
   <div class="container text-center">
     <h2 class="fw-bold mb-3">Ready to Start Your Academic Journey?</h2>
     <p class="lead mb-4">Join thousands of students who found their perfect college match with FutureApply</p>
-    <a href="{{ '/application/' | relative_url }}" class="btn btn-light btn-lg">Apply Now</a>
+    <a href="{{ '/application/' | relative_url }}" class="btn btn-outline-light btn-lg">Apply Now</a>
   </div>
 </section>
