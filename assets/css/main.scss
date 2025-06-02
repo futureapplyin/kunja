@@ -3,18 +3,22 @@
 ---
 
 // Main SCSS file
-// Using @import for better compatibility with Jekyll
+// Using modern @use syntax with namespaces
 
-// Import variables and overrides
-@import 'variables';
-@import 'bootstrap-overrides';
-@import 'base';
+// Configuration and variables first
+@use 'variables' as *;
+@use 'bootstrap-overrides' as *;
 
-// Import components
-@import 'cards';
+// Base styles
+@use 'base' as *;
 
-// Import custom styles
-@import 'custom';
+// Component styles
+@use 'cards' as *;
+@use 'services' as *;
+@use 'sticky-buttons' as *;
+
+// Custom styles (overrides and additional styles)
+@use 'custom' as *;
 
 // Footer
 .footer {

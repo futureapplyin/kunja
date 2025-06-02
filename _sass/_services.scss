@@ -1,0 +1,118 @@
+// Services Section Styles
+.services-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 5rem 0;
+
+  .service-card {
+    border-radius: 16px !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    height: 100%;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    }
+  }
+
+  .hover-shadow {
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    }
+  }
+
+  .transition-all {
+    transition: all 0.3s ease;
+  }
+
+  .icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background-color: #E5F7F7 !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      color: #00ABAA !important;
+      font-size: 2.2rem;
+    }
+  }
+
+  .card-body {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .card-title {
+    color: #212529;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-text {
+    color: #6c757d;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .features-list {
+    background: rgba(248, 249, 250, 0.7);
+    padding: 1.25rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    text-align: left;
+
+    .d-flex {
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      i {
+        color: #00ABAA;
+        margin-right: 0.5rem;
+        margin-top: 0.2rem;
+      }
+
+      span {
+        color: #495057;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .btn {
+    font-weight: 500;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(13, 110, 253, 0.25);
+    }
+  }
+}
+
+// Responsive adjustments - for medium screens and below (max-width: 991.98px)
+@media (max-width: 991.98px) {
+  .services-section {
+    padding: 3rem 0;
+
+    .service-card {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

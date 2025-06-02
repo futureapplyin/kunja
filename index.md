@@ -11,7 +11,7 @@ description: "Discover colleges and apply to institutions in India and abroad wi
       <h1 class="display-4 fw-bold mb-4">The joy of studying begins with us</h1>
       <p class="lead mb-4">Discover colleges, explore courses, and apply to institutions in India and abroad - all in one place.</p>
       <div class="d-flex justify-content-center gap-3">
-        <a href="{{ '/colleges/' | relative_url }}" class="btn btn-primary btn-lg">Explore Colleges</a>
+        <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg">Book a Call</a>
         <a href="{{ '/application/' | relative_url }}" class="btn btn-outline-light btn-lg">Apply Now</a>
       </div>
     </div>
@@ -31,23 +31,23 @@ description: "Discover colleges and apply to institutions in India and abroad wi
       <div class="col-lg-4 col-md-6">
         <div class="card service-card h-100 border-0 shadow-sm hover-shadow transition-all">
           <div class="card-body p-4 text-center">
-            <div class="icon-wrapper bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 80px; height: 80px;">
-              <i class="bi bi-building-check text-primary" style="font-size: 2.2rem;"></i>
+            <div class="icon-wrapper bg-primary bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-4">
+              <i class="bi bi-building-check"></i>
             </div>
             <h4 class="card-title fw-bold mb-3">Find the Right College</h4>
             <p class="card-text text-muted mb-4">Whether you're aiming for engineering, medicine, business, or the arts, our expert guidance helps you discover the perfect college match in India.</p>
             <a href="#" class="btn btn-primary rounded-pill px-4">Start Exploring</a>
             <div class="features-list mt-4 text-start">
               <div class="d-flex align-items-start mb-3">
-                <i class="bi bi-search me-2 mt-1" style="color: #00ABAA;"></i>
+                <i class="bi bi-search me-2 mt-1"></i>
                 <span>Explore colleges across India by course, city, fees, and ranking</span>
               </div>
               <div class="d-flex align-items-start mb-3">
-                <i class="bi bi-person-badge me-2 mt-1" style="color: #00ABAA;"></i>
+                <i class="bi bi-person-badge me-2 mt-1"></i>
                 <span>Get personalized recommendations based on your profile</span>
               </div>
               <div class="d-flex align-items-start">
-                <i class="bi bi-list-check me-2 mt-1" style="color: #00ABAA;"></i>
+                <i class="bi bi-list-check me-2 mt-1"></i>
                 <span>Compare and shortlist with our comprehensive tools</span>
               </div>
             </div>
@@ -112,94 +112,6 @@ description: "Discover colleges and apply to institutions in India and abroad wi
       </div>
     </div>
   </div>
-  
-  <style>
-  .services-section {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  }
-
-  .service-card {
-    border-radius: 16px !important;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    border: 1px solid rgba(0,0,0,0.05);
-  }
-
-  .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
-  }
-
-  .hover-shadow {
-    transition: box-shadow 0.3s ease;
-  }
-
-  .hover-shadow:hover {
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
-  }
-
-  .transition-all {
-    transition: all 0.3s ease;
-  }
-
-  .icon-wrapper {
-    margin: 0 auto;
-    transition: all 0.3s ease;
-  }
-
-  .icon-wrapper {
-    background-color: #E5F7F7 !important; /* Light teal background from theme */
-    transition: none !important; /* Remove any transitions */
-  }
-
-  .icon-wrapper i {
-    color: #00ABAA !important; /* Primary teal color from theme */
-  }
-
-  .service-card:hover .icon-wrapper {
-    transform: none; /* Remove scale effect */
-    background-color: #E5F7F7 !important; /* Keep same background on hover */
-  }
-
-  .features-list {
-    background: rgba(248, 249, 250, 0.7);
-    padding: 1.25rem;
-    border-radius: 12px;
-    margin-top: 1.5rem;
-  }
-
-  .features-list span {
-    color: #495057;
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  .card-title {
-    color: #212529;
-    font-weight: 600;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-  }
-
-  .card-text {
-    color: #6c757d;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-
-  .btn {
-    font-weight: 500;
-    padding: 0.6rem 1.5rem;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-  }
-
-  .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.25);
-  }
-  </style>
 </section>
 
 <!-- Features Section -->

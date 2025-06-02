@@ -1,0 +1,99 @@
+// Sticky Footer Buttons
+.sticky-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+
+  .sticky-btn {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    min-width: 160px;
+    justify-content: center;
+
+    i {
+      margin-right: 8px;
+      font-size: 16px;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  .btn-book-call {
+    background-color: #00ABAA;
+    color: white;
+    border: 2px solid #00ABAA;
+
+    &:hover {
+      background-color: darken(#00ABAA, 5%);
+      color: white;
+    }
+  }
+
+  .btn-call-us {
+    background-color: white;
+    color: #00ABAA;
+    border: 2px solid #00ABAA;
+
+    &:hover {
+      background-color: #f8f9fa;
+      color: #008887;
+    }
+  }
+
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    bottom: 15px;
+    right: 15px;
+    
+    .sticky-btn {
+      padding: 10px 16px;
+      font-size: 13px;
+      min-width: 140px;
+      
+      i {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: row;
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    justify-content: center;
+    
+    .sticky-btn {
+      min-width: auto;
+      padding: 10px 12px;
+      font-size: 12px;
+      flex: 1;
+      max-width: 160px;
+      
+      i {
+        margin-right: 6px;
+      }
+    }
+  }
+}
