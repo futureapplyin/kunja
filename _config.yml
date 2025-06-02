@@ -17,6 +17,13 @@ sass:
   sass_dir: _sass
   style: compressed
   sourcemap: never
+  # Use the latest Sass syntax
+  syntax: scss
+  # Enable the new Sass module system
+  load_paths:
+    - _sass
+  # Disable deprecation warnings for @import
+  quiet_deps: true
 
 # Collections
 collections:

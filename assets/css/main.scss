@@ -1,21 +1,109 @@
-// Jekyll front matter (commented out for SCSS processing)
-//---
-// # Jekyll front matter to ensure this file is processed
-//---
+// Main SCSS file
+// Using @use for modern Sass module system
 
-// Import custom variables first (Bootstrap variables will be overridden)
-@import "variables";
+// Load configuration
+@use 'sass:meta';
 
-// Import Bootstrap
-@import "bootstrap/scss/bootstrap";
+// Load variables and overrides with namespace
+@use 'variables' as *;
+@use 'bootstrap-overrides' as *;
+@use 'base' as *;
 
-// Import base styles
-@import "base";
-@import "bootstrap-overrides";
+// Feature cards
+.feature-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 30px;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  
+  .card-body {
+    transition: all 0.3s ease;
+    padding: 2rem;
+  }
+  
+  i {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+  }
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    
+    .card-body {
+      transform: translateY(-4px);
+    }
+    
+    i {
+      transform: scale(1.15) translateY(-2px);
+    }
+  }
+}
 
-// Custom styles
+// Testimonials
+.testimonial {
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  z-index: 1;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: var(--primary);
+    transition: height 0.3s ease;
+    z-index: -1;
+    opacity: 0.03;
+  }
+  
+  .card-body {
+    padding: 2rem 1rem 1rem;
+  }
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    
+    &::before {
+      height: 100%;
+    }
+    
+    .testimonial-img {
+      transform: scale(1.1);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
 
-// Additional styling for the teal theme
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 3px solid white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
 
 // Navbar styling
 .bg-primary {
@@ -101,13 +189,35 @@ a {
 
 // Feature cards
 .feature-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 30px;
   height: 100%;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  
+  .card-body {
+    transition: all 0.3s ease;
+  }
   
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    
+    .card-body {
+      transform: translateY(-4px);
+    }
+    
+    i {
+      transform: scale(1.1) translateY(-2px);
+    }
+  }
+  
+  i {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    margin-bottom: 1rem;
   }
 }
 
@@ -138,6 +248,41 @@ a {
 .testimonial {
   padding: 20px;
   text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: var(--primary);
+    transition: height 0.3s ease;
+    z-index: -1;
+    opacity: 0.03;
+  }
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    
+    &::before {
+      height: 100%;
+    }
+    
+    .testimonial-img {
+      transform: scale(1.1);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+  }
 }
 
 .testimonial-img {
@@ -146,6 +291,9 @@ a {
   border-radius: 50%;
   object-fit: cover;
   margin: 0 auto 15px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 3px solid white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 // Footer

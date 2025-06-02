@@ -1,0 +1,95 @@
+// Feature cards
+.feature-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 30px;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  
+  .card-body {
+    transition: all 0.3s ease;
+    padding: 2rem;
+  }
+  
+  i {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+  }
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    
+    .card-body {
+      transform: translateY(-4px);
+    }
+    
+    i {
+      transform: scale(1.15) translateY(-2px);
+    }
+  }
+}
+
+// Testimonials
+.testimonial {
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  z-index: 1;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background: var(--primary);
+    transition: height 0.3s ease;
+    z-index: -1;
+    opacity: 0.03;
+  }
+  
+  .card-body {
+    padding: 2rem 1rem 1rem;
+  }
+  
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    
+    &::before {
+      height: 100%;
+    }
+    
+    .testimonial-img {
+      transform: scale(1.1);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 3px solid white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
