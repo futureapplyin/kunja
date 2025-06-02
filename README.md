@@ -1,6 +1,6 @@
 # FutureApply
 
-FutureApply is a Jekyll-based website designed to help students discover colleges, obtain information about fees and courses, and apply to institutions for study in India and abroad.
+FutureApply is a modern, responsive Jekyll-based platform that helps students discover colleges, compare courses, and apply to institutions in India and abroad. The platform features a clean, user-friendly interface with modern design elements and smooth interactions.
 
 ## Table of Contents
 
@@ -16,20 +16,27 @@ FutureApply is a Jekyll-based website designed to help students discover college
 
 ## Features
 
-- Responsive design for all devices
-- College discovery and search functionality
-- Course information and comparison
-- Fee structure details
-- Online application system
-- Contact form for inquiries
+- 🎨 Modern, responsive design with smooth animations
+- 📱 Mobile-first approach for all devices
+- 🏫 College discovery with advanced search functionality
+- 📚 Course comparison tools with detailed information
+- 💰 Transparent fee structures and scholarship information
+- ✨ Interactive UI elements with hover effects
+- 📝 Streamlined online application system
+- 📧 Contact form with validation
+- 🎯 Student success stories with testimonial cards
+- 🎨 Custom theming with CSS variables
 
 ## Technologies Used
 
 - [Jekyll](https://jekyllrb.com/) - Static site generator
 - [Bootstrap 5](https://getbootstrap.com/) - Frontend framework
-- [Font Awesome](https://fontawesome.com/) - Icon library
-- [SCSS](https://sass-lang.com/) - CSS preprocessor
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Frontend interactivity
+- [Font Awesome 6](https://fontawesome.com/) - Icon library
+- [SCSS](https://sass-lang.com/) - CSS preprocessor with modern features
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Enhanced interactivity
+- [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) - For dynamic theming
+- [CSS Grid & Flexbox](https://css-tricks.com/snippets/css/complete-guide-grid/) - Modern layout techniques
+- [CSS Transitions & Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) - Smooth UI interactions
 
 ## Project Structure
 
@@ -48,13 +55,8 @@ futureapply/
 │   ├── js/
 │   │   └── main.js      # JavaScript functionality
 │   └── images/          # Image files
-├── _colleges/           # College collection
-├── _courses/            # Course collection
 ├── index.md             # Homepage
 ├── about.md             # About page
-├── colleges.md          # Colleges listing page
-├── courses.md           # Courses listing page
-├── fees.md              # Fees information page
 ├── application.md       # Application form page
 ├── contact.md           # Contact page
 └── README.md            # Project documentation

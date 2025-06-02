@@ -343,20 +343,20 @@ a:hover {
 
 .testimonial {
   transition: all 0.3s ease;
-  padding: 4.5rem 1.5rem 1.5rem; /* Increased top padding for the 25% overlap */
+  padding: 3.5rem 1.5rem 1rem; /* Reduced top and bottom padding */
   text-align: center;
-  border: 1px solid rgba(0, 171, 170, 0.2); /* Light border using theme color with 20% opacity */
+  border: 1px solid rgba(0, 171, 170, 0.2);
   border-radius: 16px;
   background: white;
-  overflow: visible; /* Changed to visible to show overflowing image */
+  overflow: visible;
   position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-top: 0; /* Reset margin-top */
-  margin-bottom: 2rem; /* Add bottom margin for spacing */
+  margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 
 .testimonial::before {
@@ -373,12 +373,13 @@ a:hover {
 }
 
 .testimonial .card-body {
-  padding: 1.5rem 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0; /* Reduced top padding */
   position: relative;
   z-index: 2;
   flex: 1;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .testimonial .card-title {
@@ -392,9 +393,11 @@ a:hover {
   color: var(--primary);
   font-weight: 500;
   font-size: 0.9rem;
-  margin: 0.5rem 0 1.5rem; /* Adjusted margins */
+  margin: 0.25rem 0 0.75rem; /* Reduced margins */
   position: relative;
   display: inline-block;
+  font-style: italic;
+  quotes: "\201C" "\201D";
 }
 
 .testimonial .card-subtitle::after {
@@ -411,32 +414,34 @@ a:hover {
 
 .testimonial .card-text {
   color: #555;
-  line-height: 1.7;
+  line-height: 1.6;
   font-size: 0.95rem;
-  margin: 0 0 1.5rem;
+  margin: 0.5rem 0 0.5rem; /* Reduced margins */
   position: relative;
-  padding: 0 0.5rem;
+  padding: 0 1.8rem; /* Added side padding for quotes */
   flex: 1;
   font-style: italic;
   quotes: "\201C" "\201D";
 }
 
 .testimonial .card-text::before {
-  content: open-quote;
-  font-size: 2.5em;
-  line-height: 0.1em;
-  margin-right: 0.15em;
-  vertical-align: -0.3em;
+  content: '\201C';
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  font-size: 1.5em;
+  line-height: 1;
   color: var(--primary);
   opacity: 0.6;
 }
 
 .testimonial .card-text::after {
-  content: close-quote;
-  font-size: 2.5em;
-  line-height: 0.1em;
-  margin-left: 0.15em;
-  vertical-align: -0.5em;
+  content: '\201D';
+  position: absolute;
+  right: 0;
+  bottom: -0.3em; /* Adjusted to bring closer to text */
+  font-size: 1.5em;
+  line-height: 1;
   color: var(--primary);
   opacity: 0.6;
 }
@@ -534,16 +539,25 @@ a:hover {
 @media (max-width: 991.98px) {
   .testimonial {
     margin-top: 22.5px; /* Match the overlap amount (90px * 0.25 = 22.5px) */
-    margin-bottom: 3rem; /* Consistent bottom margin */
+    margin-bottom: 4rem; /* Increased bottom margin for better spacing */
   }
   
   .testimonial:last-child {
-    margin-bottom: 2rem; /* Keep some bottom margin for the last card */
+    margin-bottom: 2.5rem; /* Slightly more bottom margin for the last card */
   }
   
-  /* Add spacing between cards in the row */
+  /* Add more spacing between cards in the row on mobile */
   .row > [class*='col-'] {
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  /* Adjust quotation marks for mobile */
+  .testimonial .card-text {
+    padding: 0 1.5rem; /* Slightly reduce side padding on mobile */
+  }
+  
+  .testimonial .card-text::after {
+    bottom: -0.5em; /* Further adjustment for mobile */
   }
 }
 
