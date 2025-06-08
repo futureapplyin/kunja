@@ -12,18 +12,18 @@ description: "Discover colleges and apply to institutions in India and abroad wi
         <h1 class="display-4 fw-bold mb-4">The joy of studying in india begins with us</h1>
         <p class="lead mb-4">Study in India with Future apply - seamlessly Discover, Apply, and Study your most - loved course at India's top universities & colleges.</p>
         <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
-          <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg d-flex align-items-center gap-2">
-            <i class="bi bi-telephone-fill"></i>
+          <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg align-items-center gap-2">
+            <i class="bi bi-calendar-check"></i>&nbsp;&nbsp;
             <span>Book a Call</span>
           </a>
-          <a href="{{ '/application/' | relative_url }}" class="btn btn-outline-dark btn-lg d-flex align-items-center gap-2">
-            <i class="bi bi-pencil-square"></i>
+          <a href="{{ '/application/' | relative_url }}" class="btn btn-outline-dark btn-lg align-items-center gap-2">
+            <i class="bi bi-pencil-square"></i>&nbsp;&nbsp;
             <span>Apply Now</span>
           </a>
         </div>
       </div>
       <div class="col-lg-6 mt-2 mb-2 mt-lg-0 text-center">
-        <img src="{{ '/assets/images/cheerful_young_women.jpg' | relative_url }}" alt="Happy students" class="img-fluid hero-image rounded shadow-lg" />
+        <img src="{{ '/assets/images/cheerful_young_women.jpg' | relative_url }}" alt="Happy students" class="img-fluid hero-image roundedshadow-lg" />
       </div>
     </div>
   </div>

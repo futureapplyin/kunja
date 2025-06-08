@@ -11,7 +11,7 @@
 /* Navbar styling - keeping white */
 /* Navbar with white background */
 .navbar-dark.bg-primary {
-  background-color: #ffffff !important;
+  background-color: #EAF7ED !important;
   --navbar-text-color: #333333;
   --navbar-hover-color: var(--primary);
   --navbar-active-color: var(--primary);
