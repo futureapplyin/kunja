@@ -9,11 +9,17 @@ description: "Discover colleges and apply to institutions in India and abroad wi
   <div class="container">
     <div class="row align-items-center">
       <div class="col-lg-6 hero-content text-center text-lg-start">
-        <h1 class="display-4 fw-bold mb-4">The joy of studying begins with us</h1>
-        <p class="lead mb-4">Discover colleges, explore courses, and apply to institutions in India and abroad - all in one place.</p>
+        <h1 class="display-4 fw-bold mb-4">The joy of studying in india begins with us</h1>
+        <p class="lead mb-4">Study in India with Future apply - seamlessly Discover, Apply, and Study your most - loved course at India's top universities & colleges.</p>
         <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
-          <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg">Book a Call</a>
-          <a href="{{ '/application/' | relative_url }}" class="btn btn-outline-dark btn-lg">Apply Now</a>
+          <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg d-flex align-items-center gap-2">
+            <i class="bi bi-telephone-fill"></i>
+            <span>Book a Call</span>
+          </a>
+          <a href="{{ '/application/' | relative_url }}" class="btn btn-outline-dark btn-lg d-flex align-items-center gap-2">
+            <i class="bi bi-pencil-square"></i>
+            <span>Apply Now</span>
+          </a>
         </div>
       </div>
       <div class="col-lg-6 mt-2 mb-2 mt-lg-0 text-center">
@@ -41,7 +47,10 @@ description: "Discover colleges and apply to institutions in India and abroad wi
             </div>
             <h4 class="card-title fw-bold mb-3">Find the Right College</h4>
             <p class="card-text text-muted mb-4">Whether you're aiming for engineering, medicine, business, or the arts, our expert guidance helps you discover the perfect college match in India.</p>
-            <a href="#" class="btn btn-primary rounded-pill px-4">Start Exploring</a>
+            <a href="#" class="btn btn-primary rounded-pill px-4 d-inline-flex align-items-center gap-2">
+              <span>Start Exploring</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
             <div class="features-list mt-4 text-start">
               <div class="d-flex align-items-start mb-3">
                 <i class="bi bi-search me-2 mt-1"></i>
@@ -69,7 +78,10 @@ description: "Discover colleges and apply to institutions in India and abroad wi
             </div>
             <h4 class="card-title fw-bold mb-3">Personalized Application Support</h4>
             <p class="card-text text-muted mb-4">Get one-on-one support throughout your college journey - from choosing programs to submitting applications. Our counselors guide you every step.</p>
-            <a href="#" class="btn btn-primary rounded-pill px-4">Get Expert Help</a>
+            <a href="#" class="btn btn-primary rounded-pill px-4 d-inline-flex align-items-center gap-2">
+              <span>Get Expert Help</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
             <div class="features-list mt-4 text-start">
               <div class="d-flex align-items-start mb-3">
                 <i class="bi bi-people me-2 mt-1" style="color: #00ABAA;"></i>
@@ -97,7 +109,10 @@ description: "Discover colleges and apply to institutions in India and abroad wi
             </div>
             <h4 class="card-title fw-bold mb-3">Admission & Enrollment</h4>
             <p class="card-text text-muted mb-4">Navigate the complex admission process with our expert guidance. From application strategy to final enrollment, we've got you covered.</p>
-            <a href="#" class="btn btn-primary rounded-pill px-4">Begin Your Journey</a>
+            <a href="#" class="btn btn-primary rounded-pill px-4 d-inline-flex align-items-center gap-2">
+              <span>Begin Your Journey</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
             <div class="features-list mt-4 text-start">
               <div class="d-flex align-items-start mb-3">
                 <i class="bi bi-diagram-3 me-2 mt-1" style="color: #00ABAA;"></i>
