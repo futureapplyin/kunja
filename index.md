@@ -7,12 +7,17 @@ description: "Discover colleges and apply to institutions in India and abroad wi
 <!-- Hero Section -->
 <div class="hero-section">
   <div class="container">
-    <div class="hero-content">
-      <h1 class="display-4 fw-bold mb-4">The joy of studying begins with us</h1>
-      <p class="lead mb-4">Discover colleges, explore courses, and apply to institutions in India and abroad - all in one place.</p>
-      <div class="d-flex justify-content-center gap-3">
-        <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg">Book a Call</a>
-        <a href="{{ '/application/' | relative_url }}" class="btn btn-outline-light btn-lg">Apply Now</a>
+    <div class="row align-items-center">
+      <div class="col-lg-6 hero-content text-center text-lg-start">
+        <h1 class="display-4 fw-bold mb-4">The joy of studying begins with us</h1>
+        <p class="lead mb-4">Discover colleges, explore courses, and apply to institutions in India and abroad - all in one place.</p>
+        <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+          <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg">Book a Call</a>
+          <a href="{{ '/application/' | relative_url }}" class="btn btn-outline-dark btn-lg">Apply Now</a>
+        </div>
+      </div>
+      <div class="col-lg-6 mt-5 mt-lg-0 text-center">
+        <img src="{{ '/assets/images/cheerful_young_women.jpg' | relative_url }}" alt="Happy students" class="img-fluid hero-image rounded shadow-lg" />
       </div>
     </div>
   </div>
