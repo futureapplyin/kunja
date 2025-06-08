@@ -16,7 +16,7 @@ description: "Discover colleges and apply to institutions in India and abroad wi
           <a href="{{ '/application/' | relative_url }}" class="btn btn-outline-dark btn-lg">Apply Now</a>
         </div>
       </div>
-      <div class="col-lg-6 mt-5 mt-lg-0 text-center">
+      <div class="col-lg-6 mt-2 mb-2 mt-lg-0 text-center">
         <img src="{{ '/assets/images/cheerful_young_women.jpg' | relative_url }}" alt="Happy students" class="img-fluid hero-image rounded shadow-lg" />
       </div>
     </div>
