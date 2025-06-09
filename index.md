@@ -12,10 +12,10 @@ description: "Discover colleges and apply to institutions in India and abroad wi
         <h1 class="display-4 fw-bold mb-4">The joy of studying in india begins with us</h1>
         <p class="lead mb-4">Study in India with Future apply - seamlessly Discover, Apply, and Study your most - loved course at India's top universities & colleges.</p>
         <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
-          <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary btn-lg align-items-center gap-2">
+          <button type="button" class="btn btn-primary btn-lg align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#contactModal">
             <i class="bi bi-calendar-check"></i>&nbsp;&nbsp;
             <span>Book a Call</span>
-          </a>
+          </button>
           <a href="{{ '/application/' | relative_url }}" class="btn btn-outline-dark btn-lg align-items-center gap-2">
             <i class="bi bi-pencil-square"></i>&nbsp;&nbsp;
             <span>Apply Now</span>
